@@ -1,0 +1,71 @@
+<div class="container mt-5">
+    <!-- Filter for Price Range -->
+    <div class="form-group">
+      <h4>Prix (en milliers d'euros)</h4>
+      <label for="minPrice">Min: <span id="minPriceOutput">0</span>k€</label>
+      <input type="range" class="form-range" id="minPrice" min="0" max="300" step="10" value="0" oninput="document.getElementById('minPriceOutput').innerText = this.value">
+      
+      <label for="maxPrice">Max: <span id="maxPriceOutput">300</span>k€</label>
+      <input type="range" class="form-range" id="maxPrice" min="0" max="300" step="10" value="300" oninput="document.getElementById('maxPriceOutput').innerText = this.value">
+    </div>
+  
+    <!-- Filter for Surface Range -->
+    <div class="form-group">
+      <h4>Surface (en m²)</h4>
+      <label for="minSurface">Min: <span id="minSurfaceOutput">20</span> m²</label>
+      <input type="range" class="form-range" id="minSurface" min="20" max="300" step="10" value="20" oninput="document.getElementById('minSurfaceOutput').innerText = this.value">
+      
+      <label for="maxSurface">Max: <span id="maxSurfaceOutput">300</span> m²</label>
+      <input type="range" class="form-range" id="maxSurface" min="20" max="300" step="10" value="300" oninput="document.getElementById('maxSurfaceOutput').innerText = this.value">
+    </div>
+  
+    <!-- Filter for Property Types -->
+    <div class="form-group">
+      <h4>Type de bien</h4>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="appartement">
+        <label class="form-check-label" for="appartement">
+          Appartement
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="maison">
+        <label class="form-check-label" for="maison">
+          Maison
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="terrain">
+        <label class="form-check-label" for="terrain">
+          Terrain
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="bureau">
+        <label class="form-check-label" for="bureau">
+          Bureau
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="localCommercial">
+        <label class="form-check-label" for="localCommercial">
+          Local commercial
+        </label>
+      </div>
+    </div>
+  
+    <!-- Filter for Location -->
+    <div class="form-group">
+      <h4>Location</h4>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="paris">
+        <label class="form-check-label" for="paris">
+          Paris
+        </label>
+      </div>
+      <!-- Répétez pour les autres emplacements... -->
+    </div>
+  
+    <!-- Button to apply filters -->
+    <button class="btn btn-primary" onclick="applyFilters()">Appliquer les filtres</button>
+  </div>

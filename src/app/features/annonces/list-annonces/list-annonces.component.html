@@ -1,0 +1,28 @@
+<h1 class="page-title">Liste des Annonces</h1>
+
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titre</th>
+      <th>Prix</th>
+      <th>Adresse</th>
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let annonce of listAnnonce">
+      <tr>
+        <td>{{ annonce.id }}</td>
+        <td>{{ annonce.titre }}</td>
+        <td>{{ annonce.prix | currency:'EUR' }}</td>
+        <td>{{ annonce.adresse }}</td>
+        <td><img src="{{ annonce.image }}" alt="{{ annonce.titre }}" class="annonce-image"></td>
+        <td>
+          <a routerLink="/list/annonce/{{ annonce.id }}" class="btn-details">Voir Détails</a>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

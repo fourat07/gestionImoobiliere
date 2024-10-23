@@ -1,0 +1,99 @@
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/categorie_electromenager.jpg" alt="Grand électroménager" class="img-fluid h-50 w-75">
+        <h3>Grand électroménager</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+   
+   
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/categorie_petit_electromenager.jpg" alt="Petit électroménager" class="img-fluid h-50 w-75">
+        <h3>Petit électroménager</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/categorie_produits_informatiques.jpg" alt="Produits informatiques" class="img-fluid h-50 w-75">
+        <h3>Produits informatiques</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/categorie_smartPhone.jpg" alt="Smart Phones" class="img-fluid h-50 w-75">
+        <h3>Smart Phones</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/categorie_tv_image_son.jpg" alt="TV, images et son" class="img-fluid h-50 w-75">
+        <h3>TV, images et son</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+      <div class="col-md-4" style="margin-bottom: 20px;">
+        <img src="assets/images/produits_nettoyages.jpg" alt="Produits voitures" class="img-fluid h-50 w-75">
+        <h3>Produits voiture</h3>
+        <button class="btn btn-primary">Voir produits</button>
+      </div>
+    </div>
+  </div> -->
+
+
+
+ <!--  <input type="text" [(ngModel)]="searchCategory"
+       name="searchCategory" class="form-control"
+       placeholder="search by category"> 
+<h1>{{searchAnnonce}}</h1>-->
+<!-- <table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Picture</th>
+    <th>Action</th>
+  </tr>
+  <ng-container *ngFor="let annonce of listAnnonces">
+    <tr> -->
+    <!-- -<tr *ngIf="annonce.available"> -->
+    <!-- <tr *ngIf="annonce.name.includes(searchAnnonce) || searchAnnonce==null"> -->
+   <!--    <td>{{annonce.titre}}</td>
+      <td><img src="{{annonce.image}}"></td>
+      <td>
+        <a [routerLink]="['list/annonce',annonce.id]">
+        show products by category
+        </a>
+      </td>
+    </tr>
+  </ng-container>
+</table>  -->
+
+
+<!-- <input type="text" [(ngModel)]="searchCategory" class="form-control" placeholder="search category"> -->
+<!-- <div class="row">
+<ng-container *ngFor="let annonce of listAnnonces">
+ <div class="card-container col-md-4" *ngIf="category.name.includes(searchCategory) || searchCategory==null"> -->
+
+ <!-- <div class="card" >
+    <div>
+      <img [src]="annonce.image" alt="{{annonce.titre}}">
+      <a [routerLink]="['list/annonce',annonce.id]">show details</a> 
+      
+       <div class="card-content">
+        <h3>{{annonce.titre}}</h3>
+        <button [disabled]="!annonce.available"  (click)="addLike(category)">Like</button>
+        <p>{{category.nbrLike}} Likes</p> 
+      </div>
+      
+    </div>
+  </div>
+</ng-container>
+</div>
+ -->
+
+
+ <div class="grid-container">
+  <ng-container *ngFor="let annonce of listAnnonces">
+    <div class="card">
+      <img [src]="annonce.image" alt="{{annonce.titre}}">
+      <div class="card-content">
+        <h3>{{annonce.titre}}</h3>
+        <a [routerLink]="['/list', annonce.id]">Show Details</a>
+      </div>
+    </div>
+  </ng-container>
+</div>

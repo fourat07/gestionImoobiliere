@@ -1,0 +1,39 @@
+<div class="annonce-details">
+    <div class="image-section">
+      <img [src]="annonce?.image" alt="{{ annonce?.titre }}">
+    </div>
+    
+    <div class="details-section">
+      <h1>{{ annonce?.titre }}</h1>
+      
+      <div class="detail-item">
+        <strong>Description:</strong>
+        <p>{{ annonce?.description }}</p>
+      </div>
+  
+      <div class="detail-item">
+        <strong>Type de bien:</strong>
+        <p>{{ annonce?.typeBien }}</p>
+      </div>
+  
+      <div class="detail-item">
+        <strong>Prix:</strong>
+        <p>{{ annonce?.prix | currency:'EUR' }}</p>
+      </div>
+  
+      <div class="detail-item">
+        <strong>Adresse:</strong>
+        <p>{{ annonce?.adresse }}</p>
+      </div>
+  
+      <div class="detail-item">
+        <strong>Surface:</strong>
+        <p>{{ annonce?.surface }} m²</p>
+      </div>
+      
+      <div class="back-link-container">
+        <a [routerLink]="['/list']" class="back-link">← Retour à la liste des annonces</a>
+      </div>
+    </div>
+  </div>
+  
